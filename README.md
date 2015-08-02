@@ -1,5 +1,7 @@
 # GROG.reboot
 
+[![Build Status](https://travis-ci.org/GROG/ansible-role-reboot.svg?branch=master)](https://travis-ci.org/GROG/ansible-role-reboot)
+
 A role for rebooting hosts.
 
 ## Requirements
