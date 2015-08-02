@@ -1,6 +1,6 @@
 # GROG.reboot
 
-A role for rebooting servers.
+A role for rebooting hosts.
 
 ## Requirements
 
@@ -12,7 +12,6 @@ None.
 |----------|-------------|---------------|
 | reboot_message | Reboot message for the logs | 'Reboot by Ansible' |
 | reboot_wait | Wait for hosts to come back online? | 'yes' |
-| reboot_wait_host | Host to wait for (allows ip change) | `ansible_ssh_host` or `inventory_hostname` |
 | reboot_wait_port | Port to check | `ansible_ssh_port` or 22 |
 | reboot_wait_delay | Time to wait before polling the host (seconds) | 10 |
 | reboot_wait_timeout | Timeout for host to come back up successfully (seconds) | 300 |
@@ -59,7 +58,7 @@ LGPLv3
 
 ## Contributing
 
-All assistance, changes or ideas welcome!
+All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-reboot/issues)!
 
 ## Author Information
 
