@@ -1,4 +1,4 @@
-# GROG.reboot
+# Reboot
 
 [![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.reboot-660198.svg?style=flat)](https://galaxy.ansible.com/list#/roles/4667)
 [![Build Status](https://travis-ci.org/GROG/ansible-role-reboot.svg?branch=master)](https://travis-ci.org/GROG/ansible-role-reboot)
@@ -65,4 +65,4 @@ All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-
 
 ## Author Information
 
-G. Roggemans <g.roggemans@grog.be>
+[G. Roggemans](https://github.com/groggemans)
