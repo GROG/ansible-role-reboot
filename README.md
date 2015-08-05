@@ -19,7 +19,6 @@ None.
 | `reboot_wait_delay` | Time to wait before polling the host (seconds) | 10 |
 | `reboot_wait_timeout` | Timeout for host to come back up successfully (seconds) | 300 |
 | `reboot_interval` | Interval between reboot and next task? | 'no' |
-| `reboot_interval_minutes` | Minutes to pause after reboot | 0 |
 | `reboot_interval_seconds` | Seconds to pause after reboot | 0 |
 
 #### Attention:
@@ -50,9 +49,11 @@ None.
 - hosts: servers
   serial: 1
   roles:
-  - role: GROG.reboot
-    reboot_interval: 'yes'
-    reboot_interval_minutes: 1
+  - { role: GROG.reboot,
+      become: yes,
+        reboot_interval: 'yes',
+        reboot_interval_seconds: 60
+    }
 ```
 
 ## License

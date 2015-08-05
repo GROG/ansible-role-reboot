@@ -21,8 +21,8 @@
     # Checked as string to make sure it can be specified from the command line.
 
 - name: Interval before next task
+  become: no
   pause:
-    minutes: "{{ reboot_interval_minutes }}"
     seconds: "{{ reboot_interval_seconds }}"
   when: reboot_interval|string in 'True,true,Yes,yes'
     # Checked as string to make sure it can be specified from the command line.

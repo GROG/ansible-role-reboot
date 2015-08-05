@@ -23,5 +23,4 @@ reboot_wait_timeout: 300
 reboot_interval: 'no'
 
 # Interval before next task
-reboot_interval_minutes: 0
 reboot_interval_seconds: 0
