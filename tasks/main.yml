@@ -2,14 +2,13 @@
 # tasks file for reboot
 
 - name: Reboot host
-  sudo: yes
   shell: sleep 2 && shutdown -r now "{{ reboot_message }}"
   async: 1
   poll: 0
   ignore_errors: yes
 
 - name: Wait for host
-  sudo: no
+  become: no
   local_action:
     module: wait_for
       host={{ reboot_wait_host }}

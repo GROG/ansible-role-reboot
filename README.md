@@ -38,8 +38,10 @@ None.
 ---
 - hosts: servers
   roles:
-  - role: GROG.reboot
-    reboot_message: 'Test reboot role'
+  - { role: GROG.reboot,
+      become: yes,
+        reboot_message: 'Test reboot role'
+    }
 ```
 
 #### Performing a rolling reboot:
@@ -66,4 +68,4 @@ All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-
 
 ## Author Information
 
-[G. Roggemans](https://github.com/groggemans)
+By [G. Roggemans](https://github.com/groggemans)
