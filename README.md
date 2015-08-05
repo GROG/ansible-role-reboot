@@ -7,7 +7,8 @@ A role for rebooting hosts.
 
 ## Requirements
 
-None.
+- Hosts should be bootstrapt for ansible usage (have python,...)
+- Root privilages, eg `become:yes`
 
 ## Role Variables
 
