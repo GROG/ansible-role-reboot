@@ -11,17 +11,17 @@
   become: no
   local_action:
     module: wait_for
-      host={{ reboot_wait_host }}
+      host="{{ reboot_wait_host }}"
       port="{{ reboot_wait_port }}"
       state=started
       delay="{{ reboot_wait_delay }}"
       timeout="{{ reboot_wait_timeout }}"
-  when: reboot_wait|string in 'True,true,Yes,yes'
+  when: reboot_wait|string in 'True.true.Yes.yes'
     # Checked as string to make sure it can be specified from the command line.
 
 - name: Interval before next task
   become: no
   pause:
     seconds: "{{ reboot_interval_seconds }}"
-  when: reboot_interval|string in 'True,true,Yes,yes'
+  when: reboot_interval|string in 'True.true.Yes.yes'
     # Checked as string to make sure it can be specified from the command line.
