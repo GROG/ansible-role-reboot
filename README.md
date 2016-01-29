@@ -63,7 +63,7 @@ None.
 
 All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-reboot/issues)!
 
-## Author Information
+## Author
 
 By [G. Roggemans](https://github.com/groggemans)
 
