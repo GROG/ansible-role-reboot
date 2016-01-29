@@ -1,6 +1,6 @@
 # Reboot
 
-[![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.reboot-660198.svg?style=flat)](https://galaxy.ansible.com/list#/roles/4667)
+[![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.reboot-660198.svg?style=flat)](https://galaxy.ansible.com/GROG/reboot)
 [![Build Status](https://travis-ci.org/GROG/ansible-role-reboot.svg?branch=master)](https://travis-ci.org/GROG/ansible-role-reboot)
 
 A role for rebooting hosts.
