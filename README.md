@@ -59,10 +59,6 @@ None.
     }
 ```
 
-## License
-
-LGPLv3
-
 ## Contributing
 
 All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-reboot/issues)!
@@ -70,3 +66,6 @@ All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-
 ## Author Information
 
 By [G. Roggemans](https://github.com/groggemans)
+
+## License
+MIT
