@@ -1,7 +1,7 @@
 # Reboot
 
-[![Ansible Galaxy](http://img.shields.io/badge/galaxy-GROG.reboot-660198.svg?style=flat)](https://galaxy.ansible.com/GROG/reboot)
-[![Build Status](https://travis-ci.org/GROG/ansible-role-reboot.svg?branch=master)](https://travis-ci.org/GROG/ansible-role-reboot)
+[![Ansible Galaxy][galaxy_image]][galaxy_link]
+[![Build Status][travis_image]][travis_link]
 
 A role for rebooting hosts.
 
@@ -60,12 +60,18 @@ None.
 ```
 
 ## Contributing
-
-All assistance, changes or ideas [welcome](https://github.com/GROG/ansible-role-reboot/issues)!
+All assistance, changes or ideas [welcome][issues]!
 
 ## Author
-
-By [G. Roggemans](https://github.com/groggemans)
+By [G. Roggemans][groggemans]
 
 ## License
 MIT
+
+[galaxy_image]:         http://img.shields.io/badge/galaxy-GROG.reboot-660198.svg?style=flat
+[galaxy_link]:          https://galaxy.ansible.com/GROG/reboot
+[travis_image]:         https://travis-ci.org/GROG/ansible-role-reboot.svg?branch=master
+[travis_link]:          https://travis-ci.org/GROG/ansible-role-reboot
+
+[issues]:               https://github.com/GROG/ansible-role-reboot/issues
+[groggemans]:           https://github.com/groggemans
