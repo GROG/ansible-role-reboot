@@ -2,6 +2,8 @@
 
 [![Ansible Galaxy][galaxy_image]][galaxy_link]
 [![Build Status][travis_image]][travis_link]
+[![Latest tag][tag_image]][tag_url]
+[![Gitter chat][gitter_image]][gitter_url]
 
 A role for rebooting hosts.
 
@@ -72,6 +74,10 @@ MIT
 [galaxy_link]:          https://galaxy.ansible.com/GROG/reboot
 [travis_image]:         https://travis-ci.org/GROG/ansible-role-reboot.svg?branch=master
 [travis_link]:          https://travis-ci.org/GROG/ansible-role-reboot
+[tag_image]:            https://img.shields.io/github/tag/GROG/ansible-role-reboot.svg
+[tag_url]:              https://github.com/GROG/ansible-role-reboot/tags
+[gitter_image]:         https://badges.gitter.im/GROG/chat.svg
+[gitter_url]:           https://gitter.im/GROG/chat
 
 [issues]:               https://github.com/GROG/ansible-role-reboot/issues
 [groggemans]:           https://github.com/groggemans
