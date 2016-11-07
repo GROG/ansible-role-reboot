@@ -7,6 +7,20 @@
   poll: 0
   ignore_errors: yes
 
+  # Make sure ansible_ssh_host has the correct value inside the local_action module
+- name: Set default reboot_wait_host
+  become: no
+  set_fact:
+    reboot_wait_host: "{{ ansible_ssh_host | default(inventory_hostname) }}"
+  when: (reboot_wait|string in 'True.true.Yes.yes') and reboot_wait_host is undefined
+
+  # Make sure ansible_ssh_port has the correct value inside the local_action module
+- name: Set default reboot_wait_port
+  become: no
+  set_fact:
+    reboot_wait_port: "{{ ansible_ssh_port | default(22) }}"
+  when: (reboot_wait|string in 'True.true.Yes.yes') and reboot_wait_port is undefined
+
 - name: Wait for host
   become: no
   local_action:

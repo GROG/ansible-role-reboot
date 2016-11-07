@@ -7,12 +7,6 @@ reboot_message: 'Reboot by Ansible'
 # Wait for host?
 reboot_wait: 'yes'
 
-# Host to wait for
-reboot_wait_host: "{{ ansible_ssh_host | default(inventory_hostname) }}"
-
-# Port to check on
-reboot_wait_port: "{{ ansible_ssh_port | default(22) }}"
-
 # Time to wait before polling the host
 reboot_wait_delay: 10
 
