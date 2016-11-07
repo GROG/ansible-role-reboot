@@ -41,9 +41,9 @@ None.
 ```yaml
 ---
 - hosts: servers
+  become: yes
   roles:
   - role: GROG.reboot
-    become: yes
     reboot_message: 'Test reboot role'
 ```
 
@@ -52,13 +52,12 @@ None.
 ```yaml
 ---
 - hosts: servers
+  become: yes
   serial: 1
   roles:
-  - { role: GROG.reboot,
-      become: yes,
-        reboot_interval: 'yes',
-        reboot_interval_seconds: 60
-    }
+  - role: GROG.reboot
+    reboot_interval: 'yes'
+    reboot_interval_seconds: 60
 ```
 
 ## Contributing
