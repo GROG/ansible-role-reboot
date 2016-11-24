@@ -13,6 +13,9 @@ reboot_wait_delay: 10
 # Timeout for host to come back up successfully
 reboot_wait_timeout: 300
 
+# Timeout for each connection attempt
+reboot_wait_ctimeout: 5
+
 # Interval after reboot?
 reboot_interval: 'no'
 

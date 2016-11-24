@@ -14,16 +14,18 @@ A role for rebooting hosts.
 
 ## Role Variables
 
-| Variable                  | Description                                             | Default value                              |
-|---------------------------|---------------------------------------------------------|--------------------------------------------|
-| `reboot_message`          | Reboot message for the logs                             | 'Reboot by Ansible'                        |
-| `reboot_wait`             | Wait for hosts to come back online?                     | 'yes'                                      |
-| `reboot_wait_host`        | Host to check                                           | `ansible_ssh_host` or `inventory_hostname` |
-| `reboot_wait_port`        | Port to check                                           | `ansible_ssh_port` or 22                   |
-| `reboot_wait_delay`       | Time to wait before polling the host (seconds)          | 10                                         |
-| `reboot_wait_timeout`     | Timeout for host to come back up successfully (seconds) | 300                                        |
-| `reboot_interval`         | Interval between reboot and next task?                  | 'no'                                       |
-| `reboot_interval_seconds` | Seconds to pause after reboot                           | 0                                          |
+| Variable                  | Description                                               | Default value                              |
+|---------------------------|-----------------------------------------------------------|--------------------------------------------|
+| `reboot_message`          | Reboot message for the logs                               | 'Reboot by Ansible'                        |
+| `reboot_wait`             | Wait for hosts to come back online?                       | 'yes'                                      |
+| `reboot_wait_host`        | Host to check                                             | `ansible_ssh_host` or `inventory_hostname` |
+| `reboot_wait_port`        | Port to check                                             | `ansible_ssh_port` or 22                   |
+| `reboot_wait_regex`       | String to match in the socket connection. (ex. `OpenSSH`) | /                                          |
+| `reboot_wait_delay`       | Time to wait before polling the host (seconds)            | 10                                         |
+| `reboot_wait_timeout`     | Timeout for host to come back up successfully (seconds)   | 300                                        |
+| `reboot_wait_ctimeout`    | Timeout for each connection attempt (seconds)             | 5                                          |
+| `reboot_interval`         | Interval between reboot and next task?                    | 'no'                                       |
+| `reboot_interval_seconds` | Seconds to pause after reboot                             | 0                                          |
 
 #### Attention:
 All boolean values can be used with either `'yes'`/`'no'` or `true`/`false`.

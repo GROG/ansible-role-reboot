@@ -30,6 +30,8 @@
       state=started
       delay="{{ reboot_wait_delay }}"
       timeout="{{ reboot_wait_timeout }}"
+      search_regex="{{ reboot_wait_regex | default(omit) }}"
+      connect_timeout="{{ reboot_wait_ctimeout }}"
   when: reboot_wait|string in 'True.true.Yes.yes'
     # Checked as string to make sure it can be specified from the command line.
 
