@@ -18,6 +18,7 @@ A role for rebooting hosts.
 |---------------------------|-----------------------------------------------------------|--------------------------------------------|
 | `reboot_message`          | Reboot message for the logs                               | 'Reboot by Ansible'                        |
 | `reboot_wait`             | Wait for hosts to come back online?                       | 'yes'                                      |
+| `reboot_connect_timeout`  | Connection timeout before retrying.                       | 20                                         |
 | `reboot_wait_host`        | Host to check                                             | `ansible_ssh_host` or `inventory_hostname` |
 | `reboot_wait_port`        | Port to check                                             | `ansible_ssh_port` or 22                   |
 | `reboot_wait_regex`       | String to match in the socket connection. (ex. `OpenSSH`) | /                                          |

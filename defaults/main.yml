@@ -7,6 +7,9 @@ reboot_message: 'Reboot by Ansible'
 # Wait for host?
 reboot_wait: 'yes'
 
+# Maximum number of seconds to wait for a connection to happen before closing and retrying.
+reboot_connect_timeout: 20
+
 # Time to wait before polling the host
 reboot_wait_delay: 10
 
