@@ -7,31 +7,12 @@
   poll: 0
   ignore_errors: yes
 
-  # Make sure ansible_ssh_host has the correct value inside the local_action module
-- name: Set default reboot_wait_host
-  become: no
-  set_fact:
-    reboot_wait_host: "{{ ansible_ssh_host | default(inventory_hostname) }}"
-  when: (reboot_wait|bool) and reboot_wait_host is undefined
-
-  # Make sure ansible_ssh_port has the correct value inside the local_action module
-- name: Set default reboot_wait_port
-  become: no
-  set_fact:
-    reboot_wait_port: "{{ ansible_ssh_port | default(22) }}"
-  when: (reboot_wait|bool) and reboot_wait_port is undefined
-
 - name: Wait for host
-  become: no
-  wait_for:
-    host: "{{ reboot_wait_host }}"
-    port: "{{ reboot_wait_port }}"
-    state: started
+  wait_for_connection:
+    connect_timeout: "{{ reboot_connect_timeout }}"
+    sleep: "{{ reboot_wait_ctimeout }}"
     delay: "{{ reboot_wait_delay }}"
     timeout: "{{ reboot_wait_timeout }}"
-    search_regex: "{{ reboot_wait_regex | default(omit) }}"
-    connect_timeout: "{{ reboot_wait_ctimeout }}"
-  delegate_to: localhost
   when: reboot_wait|bool
 
 - name: Interval before next task
